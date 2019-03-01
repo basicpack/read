@@ -12,5 +12,6 @@ function read($prompt = '') {
         echo $prompt;
         $line = trim(fgets(STDIN));
     }
-    return $line;
+    $arr= preg_split('/\s+/', trim(read()));
+    return implode(' ',$arr);
 }
