@@ -3,7 +3,7 @@
 //01 de março de 2019
 
 function read($prompt=''){
-    return preg_split('/\s+/', trim(read_from_console($prompt)))   
+    return preg_split('/\s+/', trim(read_from_console($prompt)));   
 }
 
 function read_from_console ($prompt = '') {
