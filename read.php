@@ -2,7 +2,11 @@
 //Criado por Anderson Ismael
 //01 de março de 2019
 
-function read($prompt = '') {
+function read($prompt=''){
+    return preg_split('/\s+/', trim(read_from_console($prompt)))   
+}
+
+function read_from_console ($prompt = '') {
     if ( function_exists('readline') ) {
         $line = trim(readline($prompt));
         if (!empty($line)) {
@@ -12,6 +16,5 @@ function read($prompt = '') {
         echo $prompt;
         $line = trim(fgets(STDIN));
     }
-    $arr= preg_split('/\s+/', trim(read()));
-    return implode(' ',$arr);
+    return $line;
 }
